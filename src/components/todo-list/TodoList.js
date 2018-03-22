@@ -2,33 +2,34 @@ import React, { Component } from "react";
 import { todos } from "../../utils/seedData";
 import "./TodoList.css";
 import TodoItem from "../TodoItem";
+import TodoForm from "../TodoForm";
 
 class TodoList extends Component {
   constructor() {
     super();
     this.state = {
       todos: todos,
-      newToDo: {description:" ", isCompleted: false}
+      newToDo: { description: " ", isCompleted: false }
     };
   }
 
   handleClick(event) {
     const todosCopy = [...this.state.todos];
     console.log(todosCopy);
-  };
+  }
 
   handleSave(event) {
-    this.setState({newToDo:{description: event.target.value}});
+    this.setState({ newToDo: { description: event.target.value } });
     console.log(event.target.value);
   }
 
   handleSubmit(event) {
     event.preventDefault();
     let updatedTodos = this.state.todos.concat(this.state.newToDo);
-    this.setState({todos: updatedTodos,
-      newToDo: {description:" ", isCompleted: false}
-    }
-    );
+    this.setState({
+      todos: updatedTodos,
+      newToDo: { description: " ", isCompleted: false }
+    });
   }
 
   render() {
@@ -43,17 +44,12 @@ class TodoList extends Component {
             handleclick={this.handleClick.bind(this, index)}
           />
         ))}
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <label>
-            ITEM:
-            <input
-              type="text"
-              value={this.state.newToDo.description}
-              onChange={this.handleSave.bind(this)}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+
+        <TodoForm
+          handleSubmit={this.handleSubmit.bind(this)}
+          handleSave={this.handleSave.bind(this)}
+          newToDo={this.state.newToDo}
+        />
       </div>
     );
   }
