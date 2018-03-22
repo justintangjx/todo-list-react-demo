@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { todos } from "../../utils/seedData";
 import "./TodoList.css";
-import TodoItem from "../TodoItem";
-import TodoForm from "../TodoForm";
+import TodoItem from "../TodoItem/TodoItem";
+import TodoForm from "../TodoForm/TodoForm";
 
 class TodoList extends Component {
   constructor() {

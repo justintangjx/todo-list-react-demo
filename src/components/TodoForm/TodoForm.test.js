@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TodoList from './todo-list/TodoList.css';
-import TodoForm from './todoForm';
+import TodoList from '../todo-list/TodoList';
+import TodoForm from './TodoForm';
 
 
 describe("TodoForm", () => {

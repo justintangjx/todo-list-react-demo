@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from "enzyme";
 import TodoList from "./TodoList";
-import TodoItem from "../TodoItem";
+import TodoItem from "../TodoItem/TodoItem";
 
 
 describe("TodoList", () => {
