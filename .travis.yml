@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '9'
+cache:
+  directories:
+  - node_modules
+script:
+- yarn test
+- yarn build
+deploy:
+  provider: heroku
+  app: whispering-eyrie-75287
+  on:
+    repo: justintangjx/todo-list-react-demo
+  api_key:
+    secure: UoMM/L+Si+Tef1vdNzkspSv8n5ZAE44Xh2a+z2gFdsU0XfINXIYxnJxEImjKvO5bmoKn1T99R9LUXH065QJggq9gtWvhbGdKEgtLjQRMYr0DLFYIv1OOnqK1weRchaVEkoE+Vmeyho/lZrIFzk+b5mOLOaEvOWS+3YptT7xocqag1hoH980BpwqTGM5udNBeHP24afXKtNCChyQOokBdxAQPQ+ni15eklEMkZk0m/joBm44fZ2D+UWTAG4c0XsyY5Ld4+9h/69pcbpkX7wKs2a4iVO1sl5Q2FXwWVo+pqepHOK1cxdgzLrim6R6gauJ6DocJzJDx9O4Ylc14YCpEIF33bU2HYm9bLXoYFDKgrPYvSoUqWRYxdXf7JXpWbm6dV5jCOxRIK4GmtBJB3FmvnGBrAMfSAGVmpevtWyIveOm8gdU4HUJF9EMn2u+i/BelcLaES6H3uuX9lqzh2j+8cu0Gjr7hYibmbvPgweDWOqb6x5QNvBGYwsFCOWsEa0Z1dom3ngHUMeK0gqGYAZhFXe+p6e/0tjfbH+s5DHcs5yE+OVElPrkJoohZM0ScQAolMzYR447cLL0e4V+EXKhyWrclTa2GFpjFsd0jRoQJzY+gCDw2u4XcKefs4RyuVHGwvXphYlTSwZDXlrKc1c07bdcD2I5cTTrg8gv9TYDTFyQ=
