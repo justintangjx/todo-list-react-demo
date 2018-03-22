@@ -13,9 +13,21 @@ class TodoList extends Component {
     };
   }
 
-  handleClick(event) {
+  handleClick(index) {
     const todosCopy = [...this.state.todos];
-    console.log(todosCopy);
+    console.log(todosCopy[index]);
+    const onSelected = todosCopy[index];
+    const clickedValue = onSelected["isCompleted"];
+
+    if(clickedValue === false) {
+      onSelected["isCompleted"] = true
+    } else if(clickedValue === true) {
+      onSelected["isCompleted"] = false
+    }
+    
+    this.setState({
+      todos: todosCopy
+    });
   }
 
   handleSave(event) {
@@ -41,7 +53,7 @@ class TodoList extends Component {
           <TodoItem
             key={index}
             todoinList={todoinList}
-            handleclick={this.handleClick.bind(this, index)}
+            handleClick={this.handleClick.bind(this, index)}
           />
         ))}
 
