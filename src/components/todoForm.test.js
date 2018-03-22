@@ -8,11 +8,12 @@ import TodoForm from './todoForm';
 describe("TodoForm", () => {
   it("should render updated form successfully", () => {
     const mockHandler = jest.fn();
-
     const wrapper = shallow(<TodoForm handleSubmit={mockHandler} />);
-
     wrapper.simulate("submit", { preventDefault() {} });
-
     expect(mockHandler).toBeCalled();
   });
+
+  it("should render desired form", () {
+    
+  }
 });

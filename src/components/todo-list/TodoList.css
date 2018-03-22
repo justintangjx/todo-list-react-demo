@@ -6,3 +6,9 @@
 #todo-title {
   background: gold
 }
+
+.done{
+  text-decoration: line-through;
+  color: red;
+  
+}
