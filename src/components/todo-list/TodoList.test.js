@@ -13,5 +13,11 @@ describe("TodoList", () => {
         expect(wrapper.find(TodoItem)).toHaveLength(wrapper.state().todos.length);
     });
 
+    it('should render a an item to be cancelled out upon clicked', () => {
+        const mockCallback = jest.fn();
+        const wrapper = shallow(<TodoList handleClick={mockCallback}/>);
+        console.log(wrapper.find(TodoItem));
+        // expect(wrapper.state().testItem2.isCompleted).to.equal(true)
+    });
 }
 )

@@ -15,7 +15,7 @@ class TodoList extends Component {
 
   handleClick(index) {
     const todosCopy = [...this.state.todos];
-    console.log(todosCopy[index]);
+    // console.log(todosCopy[index]);
     const onSelected = todosCopy[index];
     const clickedValue = onSelected["isCompleted"];
 

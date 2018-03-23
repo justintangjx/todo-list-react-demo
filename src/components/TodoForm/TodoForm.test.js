@@ -12,5 +12,4 @@ describe("TodoForm", () => {
     wrapper.simulate("submit", { preventDefault() {} });
     expect(mockHandler).toBeCalled();
   });
-
-});
+})
