@@ -1,5 +1,7 @@
 import React from 'react';
 import './TodoItem.css';
+import propTypes from 'prop-types';
+
 
 const TodoItem = props => {
     return (
@@ -11,5 +13,5 @@ const TodoItem = props => {
 }
 
 
-
 export default TodoItem;
+

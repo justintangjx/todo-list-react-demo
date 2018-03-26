@@ -14,10 +14,11 @@ describe("TodoList", () => {
     });
 
     it('should render a an item to be cancelled out upon clicked', () => {
-        const mockCallback = jest.fn();
-        const wrapper = shallow(<TodoList handleClick={mockCallback}/>);
-        console.log(wrapper.find(TodoItem));
-        // expect(wrapper.state().testItem2.isCompleted).to.equal(true)
+        const index = 0;
+        const wrapper = shallow(<TodoList />);
+        wrapper.find(TodoItem).first().props().handleClick(index);
+        expect(wrapper.state().todos[0].isCompleted).toEqual(true);
     });
+
 }
 )

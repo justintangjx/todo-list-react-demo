@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 
 const TodoForm = props => {
   return (
@@ -15,5 +17,11 @@ const TodoForm = props => {
     </form>
   );
 };
+
+TodoForm.propTypes = {
+  handleSubmit: PropTypes.func,
+  newToDo: PropTypes.object,
+  handleSave: PropTypes.func,
+}
 
 export default TodoForm;
