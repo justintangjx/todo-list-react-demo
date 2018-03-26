@@ -19,9 +19,9 @@ const TodoForm = props => {
 };
 
 TodoForm.propTypes = {
-  handleSubmit: PropTypes.func,
-  newToDo: PropTypes.object,
-  handleSave: PropTypes.func,
+  handleSubmit: PropTypes.func.isRequired,
+  newToDo: PropTypes.object.isRequired,
+  handleSave: PropTypes.func.isRequired,
 }
 
 export default TodoForm;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoItem.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 const TodoItem = props => {
@@ -10,6 +10,11 @@ const TodoItem = props => {
             {props.todoinList.description}
         </li>
     )
+};
+
+TodoItem.propTypes = {
+    todoinList: PropTypes.object.isRequired,
+    handleClick: PropTypes.func.isRequired,
 }
 
 
